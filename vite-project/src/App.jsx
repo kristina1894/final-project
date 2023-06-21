@@ -1,13 +1,14 @@
-import React from 'react';
+import React from 'react'
+import { MantineProvider, Text } from '@mantine/core'
 import Header from './components/Header'
 import  './App.css'
 
 
 function App() {
   return (
-    <div>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
       <Header />
-    </div>
+    </MantineProvider>
   );
 }
 
