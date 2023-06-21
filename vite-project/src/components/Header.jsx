@@ -1,7 +1,7 @@
 import React from 'react'
 import { MantineProvider, Text, NavLink } from '@mantine/core'
 
-function Header() {
+const Header = ()=> {
     return (
         <div className='header'>
             <div id='logo'>News App</div>
