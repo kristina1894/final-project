@@ -1,4 +1,4 @@
-/* --------- header-styling ------- */
+
 .header {
   height: 4rem;
   display: grid;
@@ -30,4 +30,29 @@
 }
 
 
-/* --------- end-of-header-styling ------- */
+.section-header{
+  margin-top: -15rem;
+}
+
+.news-grid {
+  position:absolute;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+.news-grid h4 {
+  color:rgb(3, 3, 29);
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 80%;
+  margin-left: 0.3rem;
+}
+
+.small-text {
+  display: block;
+  color: #5a5a5a;
+  width: 90%;
+}

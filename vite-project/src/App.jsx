@@ -4,12 +4,11 @@ import Header from './components/Header'
 import  './App.css'
 import NewsCard from './components/NewsCard/NewsCard'
 
-
 function App() {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
       <Header />
-      <NewsCard />
+      <NewsCard/>
     </MantineProvider>
   );
 }
