@@ -1,20 +1,20 @@
-import React from 'react'
-import { MantineProvider, Text, NavLink } from '@mantine/core'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = ()=> {
-    return (
-        <div className='header'>
-            <div id='logo'>News App</div>
-            <div id='nav-links'>
-                <NavLink label="Home"></NavLink>
-                <NavLink label="Entertainment"></NavLink>
-                <NavLink label="Lifestyle"></NavLink>
-                <NavLink label="Politics"></NavLink>
-                <NavLink label="Sport"></NavLink>
-            </div>
-
-        </div>
-    )
+const Header = () => {
+  return (
+    <div className='header'>
+      <div id='logo'>News App</div>
+      <div id='nav-links'>
+        <Link to="/">Home</Link>
+        <Link to="/lifestyle">Lifestyle</Link>
+        <Link to="/sports">Sport</Link>
+        <Link to="/entertainment">Entertainment</Link>
+        <Link to="/politics">Politics</Link>
+       
+      </div>
+    </div>
+  );
 }
 
-export default Header
+export default Header;

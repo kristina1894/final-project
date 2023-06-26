@@ -1,18 +1,28 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import {RouterProvider, createBrowserRouter} from 'react-router-dom'
+import React from 'react';
+import { Route, ReactDOM, RouterProvider } from 'react-router-dom';
+import NewsCard from './components/NewsCard/NewsCard';
+import LifestyleNewsCard from './components/NewsCard/LifestyleNewsCard';
+import EntertaimentNewsCard from './components/NewsCard/EntertaimentNewsCard';
+import SportsNewsCard from './components/NewsCard/SportsNewsCard';
+import PoliticsNewsCard from './components/NewsCard/PoliticsNewsCard';
 
- const router = createBrowserRouter([
-  {
-    path:'/',
-    element:<App />
-  }
- ])
+const routes = [
+  { path: '/', element: <NewsCard /> },
+  { path: '/lifestyle', element: <LifestyleNewsCard /> },
+  { path: '/sports', element: <SportsNewsCard /> },
+  { path: '/entertainment', element: <EntertaimentNewsCard /> },
+  { path: '/politics', element: <PoliticsNewsCard /> },
+];
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router ={router}/>
-  </React.StrictMode>,
-)
+
+const Main = () => {
+  return (
+    <>
+      {routes.map((route, index) => (
+        <Route key={index} path={route.path} element={route.element} />
+      ))}
+    </>
+  );
+};
+
+export default Main;
