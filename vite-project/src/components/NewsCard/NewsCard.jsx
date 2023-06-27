@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '@mantine/core';
+import {Link} from "react-router-dom"
 
 const NewsCard = () => {
   const [newsData, setNewsData] = useState([]);
@@ -18,28 +19,33 @@ const NewsCard = () => {
 
   useEffect(() => {
     fetchNewsHandler();
+    console.log('yes');
   }, []);
 
   return (
     dataIsFetched && (
       <div>
-        <h3 className='section-header' align="center">All News</h3>
+        <h3 className="section-header" align="left">
+          All News
+        </h3>
         <div className="news-grid">
           {newsData.map((each, index) => (
-            <Card key={index} className="each-news-grid" shadow="sm" padding="lg" radius="md">
-              <img src={each.fields.thumbnail} height={160} alt={each.webTitle} />
-              <span>
-                <h4>{each.webTitle}</h4>
-                <small className="small-text">
-                  {each.blocks.body[0].bodyTextSummary.substring(0, 124) + "..."}
-                </small>
-              </span>
-            </Card>
+            <Link to={`/${SEARCH_TERM}/${index}`} key={index}>
+              <Card className="each-news-grid" shadow="sm" padding="lg" radius="md">
+                <img src={each.fields.thumbnail} height={160} alt={each.webTitle} />
+                <span>
+                  <h4>{each.webTitle}</h4>
+                  <small className="small-text">
+                    {each.blocks.body[0].bodyTextSummary.substring(0, 124) + '...'}
+                  </small>
+                </span>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
     )
   );
-}
+};
 
 export default NewsCard;

@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '@mantine/core';
 import {Link} from "react-router-dom"
 
-const PoliticsNewsCard = () => {
+const LifestyleNewsCard = () => {
   const [newsData, setNewsData] = useState([]);
   const [dataIsFetched, setDataIsFetched] = useState(false);
 
   const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-  const SEARCH_TERM = 'opinion';
+  const SEARCH_TERM = 'culture';
   const URL = `https://content.guardianapis.com/search?q=${SEARCH_TERM}&api-key=${API_KEY}&page-size=30&show-fields=thumbnail&show-blocks=all`;
 
   const fetchNewsHandler = async () => {
@@ -26,7 +26,7 @@ const PoliticsNewsCard = () => {
     dataIsFetched && (
       <div>
         <h3 className="section-header" align="left">
-          Politics
+        Entertaiment
         </h3>
         <div className="news-grid">
           {newsData.map((each, index) => (
@@ -48,4 +48,4 @@ const PoliticsNewsCard = () => {
   );
 };
 
-export default PoliticsNewsCard;
+export default LifestyleNewsCard;

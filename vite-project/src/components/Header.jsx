@@ -1,17 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
+import './App.css';
 
 const Header = () => {
   return (
     <div className='header'>
       <div id='logo'>News App</div>
       <div id='nav-links'>
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <Link to="/lifestyle">Lifestyle</Link>
+        <Link to="/culture">Culture</Link>
         <Link to="/sports">Sport</Link>
-        <Link to="/entertainment">Entertainment</Link>
         <Link to="/politics">Politics</Link>
        
+      </div>
+      <div id="detail">
+        <Outlet/>
       </div>
     </div>
   );
