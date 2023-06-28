@@ -7,7 +7,7 @@ const LifestyleNewsCard = () => {
   const [dataIsFetched, setDataIsFetched] = useState(false);
 
   const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-  const SEARCH_TERM = 'lifestyle  ';
+  const SEARCH_TERM = 'lifestyle';
   const URL = `https://content.guardianapis.com/search?q=${SEARCH_TERM}&api-key=${API_KEY}&page-size=30&show-fields=thumbnail&show-blocks=all`;
 
   const fetchNewsHandler = async () => {

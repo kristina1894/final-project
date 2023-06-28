@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card } from '@mantine/core';
-import {Link} from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 const NewsCard = () => {
   const [newsData, setNewsData] = useState([]);
@@ -15,7 +15,7 @@ const NewsCard = () => {
     const data = await response.json();
     setNewsData(data.response.results);
     setDataIsFetched(true);
-  }
+  };
 
   useEffect(() => {
     fetchNewsHandler();
@@ -30,7 +30,7 @@ const NewsCard = () => {
         </h3>
         <div className="news-grid">
           {newsData.map((each, index) => (
-            <Link to={`/${SEARCH_TERM}/${index}`} key={index}>
+            <Link to={`/news/${index}`} key={index}>
               <Card className="each-news-grid" shadow="sm" padding="lg" radius="md">
                 <img src={each.fields.thumbnail} height={160} alt={each.webTitle} />
                 <span>
