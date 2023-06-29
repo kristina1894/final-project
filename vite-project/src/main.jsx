@@ -5,10 +5,16 @@ import "./index.css"
 import Header from "./components/Header"
 import NewsCard from "./components/NewsCard/NewsCard"
 import LifestyleNewsCard from "./components/NewsCard/LifestyleNewsCard"
-import CultureNewsCard from "./components/NewsCard/EntertaimentNewsCard"
+import CultureNewsCard from "./components/NewsCard/CultureNewsCard"
 import SportsNewsCard from "./components/NewsCard/SportsNewsCard"
 import PoliticsNewsCard from "./components/NewsCard/PoliticsNewsCard"
 import NewsDetails from "./components/NewsCard/NewsDetails"
+import LifestyleNewsDetails from "./components/NewsCard/LifestyleNewsDetails"
+import CultureNewsDetails from "./components/NewsCard/CultureNewsDetails"
+import SportsNewsDetails from "./components/NewsCard/SportsNewsDetails"
+import PoliticsNewsDetails from "./components/NewsCard/PoliticsNewsDetails"
+
+
 
 const router = createBrowserRouter([
   {
@@ -18,14 +24,16 @@ const router = createBrowserRouter([
         <Header />
         <NewsCard />
       </>
-    ),},
-{ 
-      path: "/news/:index", 
-      element:(
+    ),
+  },
+  {
+    path: "/news/:index",
+    element: (
       <>
-      <Header />
-      <NewsDetails/> 
-      </> ),
+        <Header />
+        <NewsDetails />
+      </>
+    ),
   },
   {
     path: "/lifestyle",
@@ -37,11 +45,29 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/sports",
+    path: "/lifestyle/:index",
+    element: (
+      <>
+        <Header />
+        <LifestyleNewsDetails />
+      </>
+    ),
+  },
+  {
+    path: "/sport",
     element: (
       <>
         <Header />
         <SportsNewsCard />
+      </>
+    ),
+  },
+  {
+    path: "/sport/:index",
+    element: (
+      <>
+        <Header />
+        <SportsNewsDetails />
       </>
     ),
   },
@@ -55,6 +81,15 @@ const router = createBrowserRouter([
     ),
   },
   {
+    path: "/culture/:index",
+    element: (
+      <>
+        <Header />
+        <CultureNewsDetails />
+      </>
+    ),
+  },
+  {
     path: "/politics",
     element: (
       <>
@@ -63,7 +98,16 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  
+  {
+    path: "/politics/:index",
+    element: (
+      <>
+        <Header />
+        <PoliticsNewsDetails />
+      </>
+    ),
+  },
+ 
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(

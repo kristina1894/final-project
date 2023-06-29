@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card } from '@mantine/core';
 import {Link} from "react-router-dom"
 
-const LifestyleNewsCard = () => {
+const CultureNewsCard = () => {
   const [newsData, setNewsData] = useState([]);
   const [dataIsFetched, setDataIsFetched] = useState(false);
 
@@ -48,4 +48,4 @@ const LifestyleNewsCard = () => {
   );
 };
 
-export default LifestyleNewsCard;
+export default CultureNewsCard;
