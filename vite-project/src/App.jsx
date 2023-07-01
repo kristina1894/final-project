@@ -1,8 +1,7 @@
-import React from 'react';
-import { MantineProvider } from '@mantine/core';
-import { BrowserRouter as Router } from 'react-router-dom'; 
-import Main from './main';
-
+import React from "react"
+import { MantineProvider } from "@mantine/core"
+import { BrowserRouter as Router } from "react-router-dom"
+import Main from "./main"
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
         <Main />
       </Router>
     </MantineProvider>
-  );
+  )
 }
 
-export default App;
+export default App

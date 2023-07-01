@@ -1,24 +1,30 @@
-
+:root {
+  --primary-color: #3d575d;
+  --secondary-color: #40a798;
+  --terciary-color: #70acb1;
+  --background-primary-color: #eef2e2;
+  --background-secondary-color: #f5f9ee;
+}
 .header {
-  height: 4rem;
+  height: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: fixed;
   top: 0px;
-  margin: 1rem auto;
   z-index: 999;
   width: 100%;
   -webkit-box-shadow: 0 8px 6px -6px #333;
   -moz-box-shadow: 0 8px 6px -6px #333;
   box-shadow: 0 8px 6px -6px #333;
-  background-color: white;
-
+  background-color: var(--background-primary-color);
 }
 
 #logo {
   margin-left: 2rem;
+  margin-top: 0.5rem;
   font-size: 280%;
-  color:indigo;
+  font-style: italic;
+  color: var(--primary-color);
 }
 
 #nav-links {
@@ -26,33 +32,83 @@
   flex-direction: row;
   justify-content: space-between;
   margin-right: 8rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+#nav-links a {
+  color: var(--primary-color);
+  font-style: italic;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
 }
 
+#nav-links :hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+}
 
-.section-header{
- padding-left:1.5rem;
+.section-header {
+  padding-left: 2rem;
+  color: var(--primary-color);
 }
 
 .news-grid {
-  position:absolute;
+  position: absolute;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 90%;
   margin: auto;
-  margin-top: 1rem;
+  padding: 0 5rem;
 }
 
 .news-grid h4 {
-  color:rgb(3, 3, 29);
   font-size: 0.9rem;
   font-weight: 400;
   width: 80%;
   margin-left: 0.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.news-grid a :hover {
+  transform: scale(1.1);
 }
 
 .small-text {
   display: block;
-  color: #5a5a5a;
+  color: var(--terciary-color);
   width: 90%;
+  font-style: italic;
+}
+.news-details-grid {
+  display: grid;
+  max-width: 1000px;
+  margin: auto;
+  padding: 7rem 20rem;
+  background-color: var(--background-primary-color);
+}
+
+.news-details-grid h4 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  text-align: center;
+}
+.news-details-grid h5 {
+  color: var(--secondary-color);
+}
+
+.news-details-grid p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--terciary-color);
+}
+
+.news-details-grid img {
+  max-width: 100%;
+  height: auto;
+  padding: 0 10rem;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: var(--background-secondary-color);
 }

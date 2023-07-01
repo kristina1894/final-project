@@ -14,8 +14,6 @@ import CultureNewsDetails from "./components/NewsCard/CultureNewsDetails"
 import SportsNewsDetails from "./components/NewsCard/SportsNewsDetails"
 import PoliticsNewsDetails from "./components/NewsCard/PoliticsNewsDetails"
 
-
-
 const router = createBrowserRouter([
   {
     path: "/home",
@@ -107,7 +105,6 @@ const router = createBrowserRouter([
       </>
     ),
   },
- 
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
