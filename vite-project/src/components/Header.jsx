@@ -11,7 +11,7 @@ const Header = () => {
         <Link to="/lifestyle">Lifestyle</Link>
         <Link to="/culture">Culture</Link>
         <Link to="/sport">Sport</Link>
-        <Link to="/politics">Politics</Link>
+        <Link to="/opinion">Politics</Link>
        
       </div>
       <div id="detail">

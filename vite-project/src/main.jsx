@@ -90,7 +90,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/politics",
+    path: "/opinion",
     element: (
       <>
         <Header />
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/politics/:index",
+    path: "/opinion/:index",
     element: (
       <>
         <Header />
