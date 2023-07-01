@@ -9,7 +9,7 @@ const PoliticsNewsDetails = () => {
   useEffect(() => {
     const fetchNewsDetails = async () => {
       const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-      const SEARCH_TERM = 'politics';
+      const SEARCH_TERM = 'opinion';
       const URL = `https://content.guardianapis.com/search?q=${SEARCH_TERM}&api-key=${API_KEY}&page-size=30&show-fields=thumbnail&show-blocks=all`;
       const response = await fetch(URL);
       const data = await response.json();

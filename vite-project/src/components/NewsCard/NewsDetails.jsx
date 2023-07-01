@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { Card } from '@mantine/core';
+import { useParams } from 'react-router-dom';
 
-const NewsDetails = () => {
+const PoliticsNewsDetails = () => {
   const [newsData, setNewsData] = useState({});
   const { index } = useParams();
 
   useEffect(() => {
     const fetchNewsDetails = async () => {
       const API_KEY = import.meta.env.VITE_APP_NEWS_API_KEY;
-      const URL = `https://content.guardianapis.com/search?q=news&api-key=${API_KEY}&page-size=30&show-fields=thumbnail&show-blocks=all`;
+      const SEARCH_TERM = 'news';
+      const URL = `https://content.guardianapis.com/search?q=${SEARCH_TERM}&api-key=${API_KEY}&page-size=30&show-fields=thumbnail&show-blocks=all`;
       const response = await fetch(URL);
       const data = await response.json();
       setNewsData(data.response.results[index]);
@@ -25,7 +26,7 @@ const NewsDetails = () => {
   return (
     <div>
       <h3 className="section-header" align="left">
-        News Details
+        Lifestyle News Details
       </h3>
       <Card shadow="sm" padding="lg" radius="md">
         <img src={newsData.fields.thumbnail} height={160} alt={newsData.webTitle} />
@@ -36,4 +37,4 @@ const NewsDetails = () => {
   );
 };
 
-export default NewsDetails;
+export default PoliticsNewsDetails;
