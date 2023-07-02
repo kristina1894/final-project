@@ -16,7 +16,7 @@ import PoliticsNewsDetails from "./components/NewsCard/PoliticsNewsDetails"
 
 const router = createBrowserRouter([
   {
-    path: "/home",
+    path: "/",
     element: (
       <>
         <Header />

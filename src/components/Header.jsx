@@ -10,7 +10,7 @@ const Header = () => {
     <div className={`header ${theme}`}>
       <div id="logo">News App</div>
       <div id="nav-links">
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/lifestyle">Lifestyle</Link>
         <Link to="/culture">Culture</Link>
         <Link to="/sport">Sport</Link>
