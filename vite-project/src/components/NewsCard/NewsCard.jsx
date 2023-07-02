@@ -24,14 +24,14 @@ const NewsCard = () => {
 
   return (
     dataIsFetched && (
-      <div>
+      <div className="section-news">
         <h3 className="section-header" align="left">
           All News
         </h3>
         <div className="news-grid">
           {newsData.map((each, index) => (
             <Link to={`/news/${index}`} key={index}>
-              <Card className="each-news-grid" shadow="sm" radius="lg">
+              <Card className="each-news-grid" padding="lg" radius="sm">
                 <img
                   src={each.fields.thumbnail}
                   height={160}

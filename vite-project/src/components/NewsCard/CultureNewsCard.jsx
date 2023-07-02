@@ -24,7 +24,7 @@ const CultureNewsCard = () => {
 
   return (
     dataIsFetched && (
-      <div>
+      <div className="section-news">
         <h3 className="section-header" align="left">
           Culture
         </h3>

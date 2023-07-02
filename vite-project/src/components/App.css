@@ -16,7 +16,20 @@
   -webkit-box-shadow: 0 8px 6px -6px #333;
   -moz-box-shadow: 0 8px 6px -6px #333;
   box-shadow: 0 8px 6px -6px #333;
+}
+
+.button {
+  color: var(--primary-color);
+  padding-left: 2rem;
+}
+
+.header.light {
   background-color: var(--background-primary-color);
+}
+
+.header.dark {
+  background-color: #333;
+  color: #f2f2f2;
 }
 
 #logo {
@@ -44,6 +57,10 @@
 #nav-links :hover {
   color: var(--secondary-color);
   transform: scale(1.1);
+}
+
+.section-news {
+  padding-bottom: 25rem;
 }
 
 .section-header {
