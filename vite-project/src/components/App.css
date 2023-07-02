@@ -60,7 +60,7 @@
 }
 
 .section-news {
-  padding-bottom: 25rem;
+  padding-bottom: 20rem;
 }
 
 .section-header {
@@ -117,7 +117,7 @@
 
 .news-details-grid p {
   font-size: 16px;
-  line-height: 1.5;
+  text-align:justify;
   color: var(--terciary-color);
 }
 
